@@ -1,0 +1,21 @@
+excel:
+  file_path: "data/de_challenge_data.xlsx"
+  sheet_name: "FoodSales"
+
+postgres:
+  host: "localhost"
+  port: 5432
+  database: "challenge"
+  schema: "public"
+
+etl:
+  raw_table: "food_sales"
+  load_strategy: "replace"
+  chunk_size: 1000
+
+cat_reg:
+  sql_file: "sql/create_cat_reg.sql"
+  table: "cat_reg"
+
+logging:
+  level: "INFO"
