@@ -174,8 +174,9 @@ python -m pytest tests/ -v
 
 ## Config reference
 
-| ค่า config                             | อยู่ที่ไฟล์                                          | ค่า default                             | หน้าที่                                            |
-| `POSTGRES_HOST/PORT/DB/USER/PASSWORD` | `.env`                                           | `challenge`/`root`/`DataEngineer_2024` | ใช้เชื่อมต่อฐานข้อมูล                                |
-| `excel.file_path`                     | `config/config.yaml` หรือ `EXCEL_FILE_PATH`       | `data/de_challenge_data.xlsx`          | path ของไฟล์ข้อมูลต้นทาง                          |
-| `etl.load_strategy`                   | `config/config.yaml` หรือ `ETL_LOAD_STRATEGY`     | `replace`                              | `replace` (full refresh) หรือ `append` (upsert) |
-| Airflow DAG schedule                  | `dags/food_sales_etl_dag.py` `schedule_interval` | `@daily`                               | เปลี่ยน schedule ได้โดยไม่ต้องแก้ logic ของ pipeline |
+| ค่า config | อยู่ที่ไฟล์ | ค่า default | หน้าที่ |
+|---|---|---|---|
+| `POSTGRES_HOST/PORT/DB/USER/PASSWORD` | `.env` | ตรงสเปคโจทย์ (`challenge`/`root`/`DataEngineer_2024`) | ใช้เชื่อมต่อฐานข้อมูล |
+| `excel.file_path` | `config/config.yaml` หรือ `EXCEL_FILE_PATH` | `data/de_challenge_data.xlsx` | path ของไฟล์ข้อมูลต้นทาง |
+| `etl.load_strategy` | `config/config.yaml` หรือ `ETL_LOAD_STRATEGY` | `replace` | `replace` (full refresh) หรือ `append` (upsert) |
+| Airflow DAG schedule | `dags/food_sales_etl_dag.py` `schedule_interval` | `@daily` | เปลี่ยน schedule ได้โดยไม่ต้องแก้ logic ของ pipeline |
